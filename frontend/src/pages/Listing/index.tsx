@@ -20,7 +20,7 @@ function Listing() {
   });
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=title`).then((resp) => {
+    axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`).then((resp) => {
       const data = resp.data as MoviePage;
       setPage(data);
     });
